@@ -154,7 +154,7 @@ Predicted samples from XGBoost Classifier and Regressor were compared with actua
 
 
   -📷 Key Visualizations
-![Price Distribution](https://raw.githubusercontent.com/emi-ane/House_prediction/cbf7b9b99da94fc46acddccd738a4d28d6b04ed4/Capture%20d'%C3%A9cran%202025-06-14%20175854.png )
+![Price Distribution](https://github.com/emi-ane/House_prediction/blob/main/Capture%20d'%C3%A9cran%202025-06-14%20175854.png?raw=true ))
 *Distribution of house prices in the dataset showing a strong right skew.*
 
 
