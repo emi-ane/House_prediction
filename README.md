@@ -6,43 +6,59 @@ This project aims to accurately predict house prices and classify them into pric
 It leverages a cleaned and feature-engineered housing dataset to develop high-performing machine learning models through rigorous tuning, validation, and visualization.
 
 
+
+
+
+
 🎯 Objectives
 
- -🔢 Predict house prices using regression models (Ridge, SVR, XGBoost Regressor)
+  -🔢 Predict house prices using regression models (Ridge, SVR, XGBoost Regressor)
 
- -🍿 Classify houses into pricing categories using classification models (Random Forest, LightGBM, XGBoost Classifier)
+  -🍿 Classify houses into pricing categories using classification models (Random Forest, LightGBM, XGBoost Classifier)
 
- -🔍 Handle data imbalance and feature skewness
+  -🔍 Handle data imbalance and feature skewness
 
- -⚙️ Perform hyperparameter tuning to improve model performance
+  -⚙️ Perform hyperparameter tuning to improve model performance
 
- -📊 Visualize predictions and model decision boundaries
+  -📊 Visualize predictions and model decision boundaries
+
+
+
+
 
 
 🛠️ Tools & Libraries Used
 
- -Python, NumPy, Pandas, Matplotlib, Seaborn
+  -Python, NumPy, Pandas, Matplotlib, Seaborn
 
- -Scikit-learn, XGBoost, LightGBM, imblearn
+  -Scikit-learn, XGBoost, LightGBM, imblearn
 
- -t-SNE for dimensionality reduction
+  -t-SNE for dimensionality reduction
+
+
+
+
 
 
 🧹 Data Preprocessing
 
- -✅ Removed irrelevant features
+  -✅ Removed irrelevant features
 
- -🧮 Applied log transformation to price column for regression
+  -🧮 Applied log transformation to price column for regression
 
- -🛡️ Created new features (e.g., total bathrooms, property age)
+  -🛡️ Created new features (e.g., total bathrooms, property age)
 
- -🚫 Handled missing values
+  -🚫 Handled missing values
 
- -📊 Normalized numerical features for regressors
+  -📊 Normalized numerical features for regressors
 
- -♻️ Balanced target classes using SMOTE for classification
+  -♻️ Balanced target classes using SMOTE for classification
 
 
+ 
+ 
+ 
+ 
  🧪 Models and Results
 
   - ⟳ Regression Models (Log-transformed price target)
@@ -67,31 +83,49 @@ It leverages a cleaned and feature-engineered housing dataset to develop high-pe
    ✅ XGBoost Classifier was the strongest performer in classification, particularly after SMOTE and hyperparameter tuning.
 
 
+
+
+
+
 📉 Visualizations
 
-  -🧫 t-SNE and PCA showed good class separation potential
+   -🧫 t-SNE and PCA showed good class separation potential
 
-  -📌 Confusion matrices revealed class 2 (high-price) was hardest to predict
+   -📌 Confusion matrices revealed class 2 (high-price) was hardest to predict
 
-  -🔍 Sample predictions demonstrated models' close approximation to real values
+   -🔍 Sample predictions demonstrated models' close approximation to real values
+
+
+
+
 
 
 ⚠️ Challenges & Fixes 💡
 
- -🧍‍♂️ Imbalanced Classes (Classification)
+  -🧍‍♂️ Imbalanced Classes (Classification)
+
+  
 
    -👉 Problem: Class 2 (high-price) had fewer examples
    -✅ Fix: Applied SMOTE to oversample the minority class
 
- -🧠 Overfitting in Untuned Models
+  -🧠 Overfitting in Untuned Models
+
+  
 
    -👉 Problem: High training accuracy but poor generalization
    -✅ Fix: Tuned models using GridSearchCV to improve validation performance
 
  -⟳ Inconsistent Results When Rerunning Cells
 
+ 
+
    -👉 Problem: Variables retained from earlier runs interfered with new predictions
    -✅ Fix: Used %reset_selective and reran training cells in order
+
+
+
+
 
 
 ✅ Model Testing
@@ -115,6 +149,28 @@ Predicted samples from XGBoost Classifier and Regressor were compared with actua
   Sample 2:
    Actual Class:    0
    Predicted Class: 0
+
+
+
+
+  -📷 Key Visualizations
+![Price Distribution](https://raw.githubusercontent.com/emi-ane/House_prediction/cbf7b9b99da94fc46acddccd738a4d28d6b04ed4/Capture%20d'%C3%A9cran%202025-06-14%20175854.png )
+*Distribution of house prices in the dataset showing a strong right skew.*
+
+
+![t-SNE seperation](https://github.com/emi-ane/House_prediction/blob/main/Capture%20d'%C3%A9cran%202025-06-18%20015816.png?raw=true )
+*"t-SNE projection showing the clustering of price categories after feature engineering.".*
+
+![Model Performance Bar Chart](https://github.com/emi-ane/House_prediction/blob/main/Capture%20d'%C3%A9cran%202025-06-18%20015128.png?raw=true)
+*Performance comparison of regression and classification models before and after tuning.
+
+![Confusion Matrix XGBOOST classifier](https://github.com/emi-ane/House_prediction/blob/main/Capture%20d'%C3%A9cran%202025-06-18%20015913.png?raw=true )
+*Confusion matrix highlighting model strengths and misclassification patterns.*
+
+
+
+
+
 
 💾 Conclusion
 
